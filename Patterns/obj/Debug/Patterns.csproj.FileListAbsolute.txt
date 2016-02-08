@@ -1,0 +1,1 @@
+C:\Projects\Patterns\Patterns\bin\Debug\Patterns.exe.config
