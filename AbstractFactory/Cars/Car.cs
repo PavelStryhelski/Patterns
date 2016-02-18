@@ -1,5 +1,7 @@
-﻿using AbstractFactory.CarParts;
+﻿using System;
+using AbstractFactory.CarParts;
 using AbstractFactory.CarParts.Engine;
+using AbstractFactory.Factory;
 
 namespace AbstractFactory.Cars
 {
@@ -8,7 +10,13 @@ namespace AbstractFactory.Cars
         protected IEngine Engine;
         protected IWheels Wheels;
         protected string CarName;
+        protected IBasicFactory Factory;
 
-        public abstract void Configure();
+        public void Configure()
+        {
+            Console.WriteLine("Vehicle name: " + CarName);
+            Factory.GetEngine();
+            Factory.GetWheels();
+        }
     }
 }
