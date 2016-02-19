@@ -4,9 +4,16 @@ namespace Command.Devices
 {
     public class Light
     {
+
+        private readonly string _name;
         public LightState State { get; set; }
 
-        public void Forward()
+        public Light(string name)
+        {
+            _name = name;
+        }
+
+        public void SwitchForward()
         {
             switch (State)
             {
@@ -24,8 +31,7 @@ namespace Command.Devices
                     break;
             }
         }
-
-        public void Back()
+        public void SwitchBack()
         {
             switch (State)
             {
@@ -42,6 +48,11 @@ namespace Command.Devices
                     State = LightState.Medium;
                     break;
             }
+        }
+
+        public override string ToString()
+        {
+            return _name;
         }
     }
 }

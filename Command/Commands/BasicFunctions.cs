@@ -6,21 +6,21 @@ namespace Command.Commands
 {
     public abstract class BasicFunctions
     {
-        public string On = " включен";
-        public string Off = " выключен";
-        public string Low = " слабый";
-        public string Medium = " средний";
-        public string High = " сильный";
+        private const string On = " включен";
+        private const string Off = " выключен";
+        private const string Low = " слабый";
+        private const string Medium = " средний";
+        private const string High = " сильный";
 
         public void PrintSimpleState(string devicename, SimpleState state)
         {
             switch (state)
             {
-                    case SimpleState.On:
+                case SimpleState.On:
                     Console.WriteLine("{0} {1}", devicename, On);
                     break;
 
-                    case SimpleState.Off:
+                case SimpleState.Off:
                     Console.WriteLine("{0} {1}", devicename, Off);
                     break;
             }
@@ -30,16 +30,16 @@ namespace Command.Commands
         {
             switch (state)
             {
-                case Command.States.LightState.Off:
+                case LightState.Off:
                     Console.WriteLine("{0} {1}", devicename, Off);
                     break;
-                case Command.States.LightState.Low:
+                case LightState.Low:
                     Console.WriteLine("{0} {1}", devicename, Low);
                     break;
-                case Command.States.LightState.Medium:
+                case LightState.Medium:
                     Console.WriteLine("{0} {1}", devicename, Medium);
                     break;
-                case Command.States.LightState.High:
+                case LightState.High:
                     Console.WriteLine("{0} {1}", devicename, High);
                     break;
             }

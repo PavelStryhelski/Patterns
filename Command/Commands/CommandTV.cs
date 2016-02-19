@@ -5,21 +5,13 @@ namespace Command.Commands
     public class CommandTV: BasicFunctions, ICommand
     {
         private readonly TV _tv;
-        private readonly string _name;
-        
-        public CommandTV(string name)
+
+        public CommandTV(string deviceName)
         {
-            _tv = new TV();
-            _name = name;
+            _tv = new TV(deviceName);
         }
 
-        public CommandTV(TV tv, string name)
-        {
-            _tv = tv;
-            _name = name;
-        }
-
-        public void Execute()
+        public void Forward()
         {
             switch (_tv.State)
             {
@@ -32,10 +24,10 @@ namespace Command.Commands
                     break;
             }
             
-            PrintSimpleState(_name, _tv.State);
+            PrintSimpleState(_tv.ToString(), _tv.State);
         }
 
-        public void Undo()
+        public void Back()
         {
             switch (_tv.State)
             {
@@ -48,12 +40,12 @@ namespace Command.Commands
                     break;
             }
 
-            PrintSimpleState(_name, _tv.State);
+            PrintSimpleState(_tv.ToString(), _tv.State);
         }
 
         public override string ToString()
         {
-            return _name;
+            return _tv.ToString();
         }
     }
 }

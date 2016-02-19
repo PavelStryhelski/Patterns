@@ -5,9 +5,11 @@ namespace Command.Commands
     public class CommandLight : BasicFunctions, ICommand
     {
         private readonly Light _light;
+        private readonly string _commandName;
 
-        public CommandLight(string name)
+        public CommandLight(string commandName, string name)
         {
+            _commandName = commandName;
             _light = new Light(name);
         }
 
@@ -25,7 +27,7 @@ namespace Command.Commands
 
         public override string ToString()
         {
-            return _light.ToString();
+            return _commandName;
         }
     }
 }

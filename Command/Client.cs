@@ -1,5 +1,6 @@
 ﻿using System;
 using Command.Commands;
+using Command.Devices;
 using Command.Remote;
 
 namespace Command
@@ -14,11 +15,11 @@ namespace Command
             var light1 = new CommandLight("Свет в гостиной");
 
             var remoteControl = new RemoteControl();
-            remoteControl.AddDevice(1, tv);
-            remoteControl.AddDevice(3, tv2);
-            remoteControl.AddDevice(5, tv3);
-            remoteControl.AddDevice(7, light1);
-            remoteControl.AddDevice(8, light1);
+            remoteControl.AddDevice(1, tv, "Включить/выключить телевизор в гостинной");
+            remoteControl.AddDevice(2, tv2, "Включить/выключить телевизор в спальне");
+            remoteControl.AddDevice(3, tv3, "Включить/выключить телевизор на кухне");
+            remoteControl.AddDevice(4, light1, "Переключить режима света в гостинной вперед");
+            remoteControl.AddDevice(5, light1, "Переключить режима света в гостинной назад");
 
             remoteControl.PrintMenu();
 
@@ -31,13 +32,13 @@ namespace Command
                 {
                     var button = Int32.Parse(input);
 
-                    if ((int)button % 2 == 0 )
+                    if (button == 5 )
                     {
-                        remoteControl.UndoCommand(button);
+                        remoteControl.BackCommand(button);
                     }
                     else
                     {
-                        remoteControl.RunCommand(button);
+                        remoteControl.ForwardCommand(button);
                     }
                 }
 

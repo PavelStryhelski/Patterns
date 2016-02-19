@@ -7,47 +7,52 @@ namespace Command.Remote
 {
     public class RemoteControl
     {
-        private readonly Dictionary<int, ICommand> _devices;
+        private readonly Dictionary<int, ICommand> _commands;
+        private readonly Dictionary<ICommand, string> _commandNames;
 
         public RemoteControl()
         {
-            _devices = new Dictionary<int, ICommand>();
+            _commands = new Dictionary<int, ICommand>();
+            _commandNames = new Dictionary<ICommand, string>();
         }
 
-        public void AddDevice(int id, ICommand device)
+        public void AddDevice(int id, ICommand device, string commandName)
         {
-            _devices[id] = device;
+            _commands[id] = device;
+            _commandNames[device] = commandName;
         }
 
-        public void RunCommand(int id)
+        public void ForwardCommand(int id)
         {
-            if (_devices.ContainsKey(id))
+            if (_commands.ContainsKey(id))
             {
-                _devices[id].Execute();
+                _commands[id].Forward();
             }
         }
 
-        public void UndoCommand(int id)
+        public void BackCommand(int id)
         {
-            if (_devices.ContainsKey(id))
+            if (_commands.ContainsKey(id))
             {
-                _devices[id].Undo();
+                _commands[id].Back();
             }
         }
 
-        public void RemoveDevice(ICommand device)
+        public void RemoveDevice(ICommand command)
         {
-            if (!_devices.ContainsValue(device)) return;
+            if (!_commands.ContainsValue(command)) return;
 
-            var removeDevice = _devices.FirstOrDefault(x => x.Value == device);
-            _devices.Remove(removeDevice.Key);
+            var removeDevice = _commands.FirstOrDefault(x => x.Value == command);
+            _commands.Remove(removeDevice.Key);
+
+            _commandNames.Remove(command);
         }
 
         public void PrintMenu()
         {
-            foreach (var device in _devices)
+            foreach (var command in _commands)
             {
-                Console.WriteLine("{0}: \t {1}\n", device.Key, device.Value);
+                Console.WriteLine("{0}: \t {1}\n", command.Key, _commandNames[command.Value]);
             }
 
             Console.WriteLine("0: \t Выход");
