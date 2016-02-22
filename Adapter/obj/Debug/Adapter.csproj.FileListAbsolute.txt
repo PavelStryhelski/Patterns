@@ -1,1 +1,0 @@
-D:\UsefulProjects\Patterns\Adapter\bin\Debug\Adapter.exe.config
