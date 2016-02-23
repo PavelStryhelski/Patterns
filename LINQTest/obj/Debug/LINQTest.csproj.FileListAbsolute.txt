@@ -1,0 +1,6 @@
+D:\UsefulProjects\Patterns\LINQTest\bin\Debug\LINQTest.exe.config
+D:\UsefulProjects\Patterns\LINQTest\bin\Debug\LINQTest.exe
+D:\UsefulProjects\Patterns\LINQTest\bin\Debug\LINQTest.pdb
+D:\UsefulProjects\Patterns\LINQTest\obj\Debug\LINQTest.csprojResolveAssemblyReference.cache
+D:\UsefulProjects\Patterns\LINQTest\obj\Debug\LINQTest.exe
+D:\UsefulProjects\Patterns\LINQTest\obj\Debug\LINQTest.pdb
