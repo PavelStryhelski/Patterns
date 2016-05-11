@@ -12,6 +12,7 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
+            //Some comments
             IBasicFactory euFactory = new EUFactory();
             IBasicFactory rusFactory = new RusFactory();
 

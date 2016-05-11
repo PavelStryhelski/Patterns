@@ -1,0 +1,5 @@
+D:\UsefulProjects\Patterns\State\bin\Debug\State.exe.config
+D:\UsefulProjects\Patterns\State\bin\Debug\State.exe
+D:\UsefulProjects\Patterns\State\bin\Debug\State.pdb
+D:\UsefulProjects\Patterns\State\obj\Debug\State.exe
+D:\UsefulProjects\Patterns\State\obj\Debug\State.pdb

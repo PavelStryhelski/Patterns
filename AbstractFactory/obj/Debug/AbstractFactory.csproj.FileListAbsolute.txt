@@ -1,0 +1,6 @@
+D:\UsefulProjects\Patterns\AbstractFactory\bin\Debug\AbstractFactory.exe.config
+D:\UsefulProjects\Patterns\AbstractFactory\bin\Debug\AbstractFactory.exe
+D:\UsefulProjects\Patterns\AbstractFactory\bin\Debug\AbstractFactory.pdb
+D:\UsefulProjects\Patterns\AbstractFactory\obj\Debug\AbstractFactory.csprojResolveAssemblyReference.cache
+D:\UsefulProjects\Patterns\AbstractFactory\obj\Debug\AbstractFactory.exe
+D:\UsefulProjects\Patterns\AbstractFactory\obj\Debug\AbstractFactory.pdb

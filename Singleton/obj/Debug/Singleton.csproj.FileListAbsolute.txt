@@ -1,0 +1,5 @@
+D:\UsefulProjects\Patterns\Singleton\bin\Debug\Singleton.exe.config
+D:\UsefulProjects\Patterns\Singleton\bin\Debug\Singleton.exe
+D:\UsefulProjects\Patterns\Singleton\bin\Debug\Singleton.pdb
+D:\UsefulProjects\Patterns\Singleton\obj\Debug\Singleton.exe
+D:\UsefulProjects\Patterns\Singleton\obj\Debug\Singleton.pdb
